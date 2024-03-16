@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+hr:not(.news-type-heading hr) {
+  margin: 0 4%;
+}
+
+nav {
+  padding: 1% 5%;
+  /* background-color: rgb(219, 219, 219); */
+  background-color: #000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav select:focus {
+  outline: none;
+}
+
+nav>div {
+  display: flex;
+  align-items: center;
+}
+
+nav>div>select {
+  margin: 0 5px;
+  padding: 5px 0;
+}
+
+/* Search */
+.search {
+  display: flex;
+  /* background-color: #cecece; */
+  margin-top: 4%;
+  padding: 1% 5%;
+}
+
+.search button {
+  width: 30px;
+  text-align: center;
+  background-color: #000;
+}
+
+.search button i {
+  margin-top: auto;
+  color: white;
+}
+
+.search-bar {
+  width: 100%;
+  border: 1px solid #000;
+  background: none;
+  padding: 10px;
+}
+
+.search-bar:focus {
+  outline: none;
+}
+
+.news-type-heading {
+  padding: 3% 0 0 5%;
+}
+
+.news-type-heading hr {
+  margin-right: 5%;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(5, 5fr);
+  column-gap: 2%;
+  /* grid-auto-rows: 370px; */
+  padding: 2% 5%;
+}
+
+.card {
+  overflow: hidden;
+  margin: 5% 0;
+  padding-bottom: 20px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.card>.source-heading {
+  padding: 10px 0 0 10px;
+}
+
+.card>img {
+  width: 100%;
+}
+
+.card>.title {
+  padding: 10px;
+}
+
+.card>a.read-more {
+  margin-left: 10px;
+  padding: 5px;
+  border: 1px solid #000;
+  transition: 0.2s;
+  color: black;
+  text-decoration: none;
+}
+
+.read-more:hover,
+.read-more:active {
+  background-color: rgb(136, 136, 136);
+  color: white;
+}
+
+@media (max-width: 992px) {
+  .card-container {
+    grid-template-columns: repeat(4, 4fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(3, 3fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .card-container {
+    grid-template-columns: repeat(2, 2fr);
+  }
+}
+
+@media (max-width: 425px) {
+  .card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.loader {
+  text-align: center;
+}
+
+.loader>img {
+  width: 10%;
+}
